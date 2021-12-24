@@ -78,6 +78,10 @@ strong{
   height: 300px;
 }
 
+.black{
+  color: #000;
+}
+
 .card{
    width: 90rem;
 }
