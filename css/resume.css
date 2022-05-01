@@ -81,7 +81,7 @@ h6{
 }
 
 .subheading {
-  text-transform: uppercase;
+  
   font-weight: 500;
   font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 1.5rem;
@@ -571,7 +571,12 @@ input:focus, textarea:focus {
   background-color: rgba(0,0,0,0);
   color: #760000;
 }
-  
+ 
+.button:hover{
+  background-color: rgba(245, 106, 106, 0.05);
+  color: #760000;
+}
+
 .submit:hover {
   color: #760000;
 }
