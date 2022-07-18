@@ -1,5 +1,5 @@
 # Personal Website
 <h3> Jerrin Bright</h3>
 <p> Robotics Enthusiast </p>
-<p> Undergraduate Student, VIT Chennai</p> 
-<h3> Demo link for my <a href="https://jbright.tech/">website</a></h3>
+<p> MASc Systems Grad Student @ UWaterloo, Canada</p> 
+<h3> Demo link for my <a href="jerriebright.github.io">website</a></h3>
