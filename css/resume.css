@@ -731,16 +731,7 @@ hr.star-primary:after {
     color: #000;
     text-align: left;
 }
-@media (max-width: 768px) {
-    .pubt {
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .pubd {
-        text-align: left;
-    }
-}
+
 .pubd {
     text-align: left;
     font-size: 14px;
@@ -802,4 +793,54 @@ hr.star-primary:after {
 .clr_wt{
   color: #fff;
   font-weight: 500;
+}
+
+.pub-img1{
+  width: 360px;
+}
+
+.pub-img2{
+  width: 360px;
+  height: 180px;
+}
+
+.pub-img3{
+  width: 360px;
+  height:170px;
+}
+
+.pub-img4{
+  width: 370px;
+}
+
+@media (max-width: 768px) {
+  .pubt {
+      text-align: center;
+      margin-top: 10px;
+  }
+  .puba {
+      text-align: center;
+  }
+  .pubv {
+    text-align: center;
+  }
+  .publ {
+    text-align: center;
+  }
+  .pub-img1{
+    width: 280px;
+  }  
+  .pub-img2{
+    width: 280px;
+  }  
+  .pub-img3{
+    width: 280px;
+  }  
+  .pub-img4{
+    width: 275px;
+  }
+  .title-reduce-size{
+    font-size: 60px;
+    text-align: center;
+  }
 }
