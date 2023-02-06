@@ -19,6 +19,10 @@ body {
   }
 }
 
+.container{
+  margin-left: 0%;
+}
+
 h1,
 h2,
 h3,
@@ -853,3 +857,4 @@ hr.star-primary:after {
     text-align: center;
   }
 }
+
