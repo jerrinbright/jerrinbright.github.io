@@ -31,12 +31,12 @@ h5,
 h6 {
   font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #000;
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 4rem;
   line-height: 5.5rem;
 }
 
@@ -64,6 +64,18 @@ p.lead {
   color: #000;
 }
 
+p.lead-home {
+  font-size: 1.3rem;
+  font-weight: 510;
+  color: #444242;
+}
+
+p.lead-bio {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000;
+}
+
 p{
   color: #000;
   font-weight: 500;
@@ -78,27 +90,28 @@ strong{
   color: #000;
 }
 
+.link-home{
+  text-decoration: None;
+  color: #000;
+}
+
 h6{
   text-align: left;
   font-size: 17px;
   text-transform: capitalize;
 }
 
-.subheading {
-  
-  font-weight: 500;
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-size: 1.5rem;
-}
-
-
-.subheading {
-  
+.subheading {  
   font-weight: 500;
   font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 1.2rem;
 }
 
+.subheading-home {  
+  font-weight: 500;
+  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 20rem;
+}
 
 .black{
   color: #000;
@@ -221,7 +234,7 @@ h6{
 }
 
 .hvr-forward{
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .hvr-forward1{
@@ -439,6 +452,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .hvr-hang{
+  font-size: 0.9em;
   background-color: #fff;
 }
 
@@ -764,7 +778,7 @@ hr.star-primary:after {
 }
 .pubv {
     color: #900;
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
 }
 .publ {
@@ -778,13 +792,55 @@ hr.star-primary:after {
 }
 .publ li {
     border: 1px solid #CCC;
-    padding: 5px;
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
     margin: 5px 2px;
     display: inline-block;
+    border-radius: 4px;
+    background-color: #760000;
+
 }
 
 .publ li a{
   text-decoration: none;
+  color: #fff;
+}
+
+.publ li:hover{
+  background-color: black;
+}
+
+.publ li a:hover{
+  color: #fff;
+}
+
+.publ li span.pointer {
+  color: #fff;
+}
+
+.ta-button {
+  padding-top: 10px;
+  text-align: left;
+}
+.ta-button ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ta-button li a{
+  border: 1px solid #fff;
+  padding: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin: 5px 5px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #760000;
+  text-decoration: none;
+  color: #fff;
+  width: 110px;
+  text-align: center;
 }
 
 .btn{
@@ -809,7 +865,9 @@ hr.star-primary:after {
 }
 
 .pub-img1{
-  width: 360px;
+  width: 250px;
+  /* border: 1px solid #000;
+  border-radius: 4px; */
 }
 
 .pub-img2{
@@ -841,7 +899,7 @@ hr.star-primary:after {
     text-align: center;
   }
   .pub-img1{
-    width: 280px;
+    width: 250px;
   }  
   .pub-img2{
     width: 280px;
@@ -853,8 +911,17 @@ hr.star-primary:after {
     width: 275px;
   }
   .title-reduce-size{
-    font-size: 60px;
+    font-size: 30px;
     text-align: center;
   }
 }
 
+.pub-mar{
+  margin-left: -40px;
+}
+
+@media (max-width: 768px) {
+  .pub-mar{
+    margin-left: 0px;
+  }
+}
