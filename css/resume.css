@@ -843,15 +843,16 @@ hr.star-primary:after {
 .ta-button li a{
   border: 1px solid #fff;
   padding: 3px;
-  padding-left: 7px;
-  padding-right: 7px;
-  margin: 5px 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin: 3px 3px;
   display: inline-block;
   border-radius: 4px;
   background-color: #760000;
+  font-size:smaller;
   text-decoration: none;
   color: #fff;
-  width: 125px;
+  width: 100px;
   /* height: 35px; */
   text-align: center;
 }
