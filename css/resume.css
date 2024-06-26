@@ -125,7 +125,7 @@ h6{
 }
 
 .card{
-   width: 50rem;
+   width: 100rem;
 }
 
 .brk{
@@ -350,7 +350,13 @@ section.resume-section .resume-item .resume-date {
 /* NEW EDITS */
 @media (min-width: 1100px){
    .card{
-    width: 52rem;
+    width: 75rem;
+   }
+   .card-img{
+    height: 18rem;
+   }
+   .card-img-awards{
+    height: 20rem;
    }
  }
 
