@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Gen4D: Synthesizing Humans and Scenes in the Wild">
+  <meta name="keywords" content="Gaussian Splatting, Diffusion, Human Modeling, Scene Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gen4D: Synthesizing Humans and Scenes in the Wild</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Gen4D: Synthesizing Humans and Scenes in the Wild</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://keunhong.com">Jerrin Bright</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://utkarshsinha.com">Zhibo Wong</a><sup>1, 2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jonbarron.info">Yuhao Chen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://sofienbouaziz.com">Sirisha Rambhatla</a><sup>1, 2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.danbgoldman.com">David Clausi</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~seitz/">John Zelek</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Vision and Image Processing Lab, University of Waterloo</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>2</sup>CriticalML Lab, University of Waterloo</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2 hvr-grow-rotate" src="images/gen4d_teaser.svg" alt="profile-pic"/>
+      </span>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Overview of the SportPAL dataset generated using our proposed framework, Gen4D.</span> (a) Examples of diverse canonical avatars synthesized 
+        via diffusion-guided prompt modeling, illustrating variation in clothing, body shape, and appearance. (b) Final synthetic frames rasterized with motion-driven 
+        avatar animation and human pose-aware backgrounds, demonstrating realistic lighting, shadows, and foot-ground interaction.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Lack of input data for in-the-wild activities often results in low performance across various computer vision tasks. This challenge is particularly pronounced in 
+            uncommon human-centric domains like sports, where real-world data collection is complex and impractical. While synthetic datasets offer a promising alternative, 
+            existing approaches typically suffer from limited diversity in human appearance, motion, and scene composition due to their reliance on rigid asset libraries and 
+            hand-crafted rendering pipelines. 
+          </p>
+          <p>
+            To address this, we introduce Gen4D, a fully automated pipeline for generating diverse and photorealistic 4D human animations. Gen4D integrates expert-driven motion encoding, 
+            prompt-guided avatar generation using diffusion-based Gaussian splatting, and human-aware background synthesis to produce highly varied and lifelike human sequences. 
+          </p>
+          <p>
+            Based on Gen4D, we present SportPAL, a large-scale synthetic dataset spanning three sports— baseball, icehockey, and soccer. Together, Gen4D and SportPAL provide a scalable 
+            foundation for constructing synthetic datasets tailored to in-the-wild human-centric vision tasks, with no need for manual 3D modeling or scene design.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">The Proposed Method: Gen4D</h2>
+        <div class="publication-video">
+          <span class="d-none d-lg-block">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2 hvr-grow-rotate" src="images/gen4D.svg" alt="profile-pic"/>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Animation</h2>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">SportPAL</h3>
+        <div class="content has-text-justified">
+          <p>
+            We introduce a large-scale synthetic sports dataset for human-centric vision tasks.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <span class="d-none d-lg-block">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2 hvr-grow-rotate" src="images/qual-genavatars.svg" alt="profile-pic"/>
+          </span>
+        </div>
+        <!--/ Re-rendering. -->
+
+        <h3 class="title is-4">Pose Estimation</h3>
+        <div class="content has-text-justified">
+          <p>
+            Some qualitative results for 2D pose estimation using TokenPose model trained on SportPAL dataset are displayed below: 
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <span class="d-none d-lg-block">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2 hvr-grow-rotate" src="images/visualization.png" alt="profile-pic"/>
+          </span>
+        </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://alvinliu0.github.io/projects/HumanGaussian">HumanGaussian: Text-Driven 3D Human Generation with Gaussian Splatting</a> introduces an idea similar to our windowed 
+            position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://openreview.net/forum?id=u1cQYxRI1H">Scaling In-the-Wild Training for Diffusion-based Illumination Harmonization and Editing by Imposing Consistent 
+              Light Transport</a> both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            <a href="https://motionbert.github.io/">MotionBERT: A Unified Perspective on Learning Human Motion Representations</a> both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{gen4d,
+  author    = {Bright, Jerrin and Wang, Zhibo and Chen, Yuhao and Rambhatla, Sirisha and David, Clausi and Zelek, John},
+  title     = {Gen4D: Synthesizing Humans and Scenes in the Wild},
+  journal   = {CVPRW},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

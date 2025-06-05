@@ -846,6 +846,7 @@ hr.star-primary:after {
   margin: 0;
   padding: 0;
 }
+
 .ta-button li a{
   border: 1px solid #fff;
   padding: 3px;
@@ -859,6 +860,33 @@ hr.star-primary:after {
   text-decoration: none;
   color: #fff;
   width: 100px;
+  /* height: 35px; */
+  text-align: center;
+}
+
+.tas-button {
+  padding-top: 10px;
+  text-align: left;
+}
+.tas-button ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tas-button li a{
+  border: 1px solid #fff;
+  padding: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin: 3px 3px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #760000;
+  font-size:smaller;
+  text-decoration: none;
+  color: #fff;
+  width: 120px;
   /* height: 35px; */
   text-align: center;
 }
