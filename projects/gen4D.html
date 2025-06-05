@@ -100,12 +100,12 @@
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fab fa-youtube"></i>
+                      <i class="fas fa-image"></i>
                   </span>
                   <span>Poster</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -113,7 +113,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
             </div>
             </div>
 
@@ -169,12 +169,23 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">The Proposed Method: Gen4D</h2>
-        <div class="publication-video">
+
+          <div class="content has-text-justified">
+            <p>
+            Our method consists of three stages: Section 3.1 Motion Extraction extracts 3D human motion from expert demonstrations; 
+            Section 3.2 Canonical Human Gaussians generates diverse human avatars via diffusion-guided Gaussian optimization; and Section 3.3 Scene Composition deforms avatars with 
+            motion, rasterizes them from varied viewpoints, and synthesizes realistic backgrounds using a scene-conditioned diffuser.
+            </p>
+          </div>
           <span class="d-none d-lg-block">
             <img class="img-fluid img-profile rounded-circle mx-auto mb-2 hvr-grow-rotate" src="images/gen4D.svg" alt="profile-pic"/>
           </span>
+          <!-- <h2 class="subtitle has-text-centered">
+            <span class="dnerf">The pipeline of Gen4D. </span> Our method consists of three stages: Section 3.1 Motion Extraction extracts 3D human motion from expert demonstrations; 
+            Section 3.2 Canonical Human Gaussians generates diverse human avatars via diffusion-guided Gaussian optimization; and Section 3.3 Scene Composition deforms avatars with 
+            motion, rasterizes them from varied viewpoints, and synthesizes realistic backgrounds using a scene-conditioned diffuser.
+          </h2> -->
         </div>
-      </div>
     </div>
     <!--/ Paper video. -->
   </div>
@@ -187,13 +198,14 @@
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">SportPAL Dataset</h2>
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">SportPAL</h3>
+        <!-- <h3 class="title is-4">SportPAL</h3> -->
         <div class="content has-text-justified">
           <p>
-            We introduce a large-scale synthetic sports dataset for human-centric vision tasks.
+            We introduce a large-scale synthetic sports dataset for human-centric sports vision tasks with groundtruth annotation for 2D/ 3D pose estimation, SMPL parameters, 
+            depth estimation, and action recognition.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -203,7 +215,7 @@
         </div>
         <!--/ Re-rendering. -->
 
-        <h3 class="title is-4">Pose Estimation</h3>
+        <h2 class="title is-4">Pose Estimation</h2>
         <div class="content has-text-justified">
           <p>
             Some qualitative results for 2D pose estimation using TokenPose model trained on SportPAL dataset are displayed below: 
@@ -227,25 +239,23 @@
 
         <div class="content has-text-justified">
           <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
+            There's a lot of excellent work that was utilized towards the successful completion of this work. We thank the authors for releasing the codes.
           </p>
           <p>
-            <a href="https://alvinliu0.github.io/projects/HumanGaussian">HumanGaussian: Text-Driven 3D Human Generation with Gaussian Splatting</a> introduces an idea similar to our windowed 
-            position encoding for coarse-to-fine optimization.
+            <a href="https://alvinliu0.github.io/projects/HumanGaussian">HumanGaussian: Text-Driven 3D Human Generation with Gaussian Splatting</a> introduces text to 3D human generation framework
+            by optimizing gaussian parameters through a diffusion backbone. 
           </p>
           <p>
             <a href="https://openreview.net/forum?id=u1cQYxRI1H">Scaling In-the-Wild Training for Diffusion-based Illumination Harmonization and Editing by Imposing Consistent 
-              Light Transport</a> both use deformation fields to model non-rigid scenes.
+              Light Transport</a> utilize diffusion to control background given a masked image of a person (rasterized gaussian in this case). 
           </p>
           <p>
-            <a href="https://motionbert.github.io/">MotionBERT: A Unified Perspective on Learning Human Motion Representations</a> both use deformation fields to model non-rigid scenes.
+            <a href="https://motionbert.github.io/">MotionBERT: A Unified Perspective on Learning Human Motion Representations</a> learns the underlying motion representation of a person from a given video and
+            estimates 3D pose, action and SMPL parameters from it through dedicated heads.
           </p>
-          <p>
+          <!-- <p>
             Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
