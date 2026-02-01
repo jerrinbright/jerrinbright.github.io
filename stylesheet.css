@@ -1,0 +1,347 @@
+/* Jon Barron-style Academic Portfolio CSS */
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #1772d0;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #f09228;
+    text-decoration: none;
+}
+
+body, td, th, tr, p, a {
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+strong {
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+heading {
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+    font-size: 22px;
+}
+
+papertitle {
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+name {
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+    font-size: 32px;
+}
+
+/* Headings */
+h2 {
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+}
+
+/* Paper Title class */
+.papertitle {
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1772d0;
+}
+
+a:hover .papertitle {
+    color: #f09228;
+}
+
+/* Name class */
+.name {
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+    font-size: 32px;
+}
+
+/* Highlighted Papers - Grey */
+tr.highlight {
+    background-color: #e8e8e8;
+}
+
+.highlight {
+    background-color: #e8e8e8;
+}
+
+/* Publication Images */
+.one {
+    position: relative;
+    width: 100%;
+}
+
+.one img {
+    width: 100%;
+    height: auto;
+}
+
+/* Profile Photo with hover animation */
+.hoverZoomLink {
+    width: 80%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hoverZoomLink:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Affiliations Logos */
+.affiliations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 10px 0;
+}
+
+.affiliations img {
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+.affiliations img:hover {
+    opacity: 1;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #4a90d9;
+    border-radius: 3px;
+    margin-left: 4px;
+    vertical-align: middle;
+    cursor: default;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.badge.oral {
+    background-color: #d9534f;
+}
+
+.badge.oral:hover {
+    box-shadow: 0 2px 8px rgba(217, 83, 79, 0.5);
+}
+
+.badge.award {
+    background-color: #5cb85c;
+}
+
+.badge.award:hover {
+    box-shadow: 0 2px 8px rgba(92, 184, 92, 0.5);
+}
+
+/* Lists */
+ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* News Section Styling */
+.news-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+}
+
+.news-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    color: #6c757d;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.news-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+
+.news-badge.media { background-color: #dc3545; }
+.news-badge.paper { background-color: #28a745; }
+.news-badge.award { background-color: #ffc107; color: #000; }
+
+/* Current Focus Section */
+.current-focus {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-left: 4px solid #1772d0;
+    border-radius: 0 8px 8px 0;
+    padding: 15px 20px;
+    margin: 10px 0;
+}
+
+/* Research Stats Widget */
+.stats-widget {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1772d0;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #6c757d;
+    text-transform: uppercase;
+}
+
+/* Publication Filters */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-btn {
+    padding: 6px 14px;
+    border: 1px solid #1772d0;
+    border-radius: 20px;
+    background: white;
+    color: #1772d0;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Lora', 'Times New Roman', Times, serif;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #1772d0;
+    color: white;
+}
+
+/* BibTeX button */
+.bibtex-btn {
+    color: #666;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.bibtex-btn:hover {
+    color: #1772d0;
+}
+
+/* Toast notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body, td, th, tr, p, a {
+        font-size: 13px;
+    }
+    
+    .name, name {
+        font-size: 26px;
+    }
+    
+    h2, heading {
+        font-size: 18px;
+    }
+    
+    table {
+        width: 100% !important;
+    }
+    
+    td {
+        display: block;
+        width: 100% !important;
+        padding: 10px 5px;
+    }
+    
+    td[style*="width:30%"],
+    td[style*="width:40%"] {
+        text-align: center;
+    }
+    
+    .one img {
+        max-width: 250px;
+    }
+    
+    .affiliations {
+        gap: 15px;
+    }
+    
+    .affiliations img {
+        height: 40px !important;
+    }
+    
+    .stats-widget {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+    }
+}
